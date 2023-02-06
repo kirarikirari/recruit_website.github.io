@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>problog</title>
+    <meta
+      name="description"
+      content="駆け出しのへなちょこプログラマーの成長日記"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="webclip.png" />
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="problog" />
+    <meta property="og:url" content="サイトのURL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="problog" />
+    <meta
+      property="og:description"
+      content="駆け出しのへなちょこプログラマーの成長日記"
+    />
+    <meta property="og:image" content="URL" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="駆け出しのへなちょこプログラマーの成長日記"
+    />
+    <meta name="twitter:image:src" content="URL" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.js"
+      integrity="sha512-2rSKyHme2mrplfIGsA8bFYAYddQ66qR+Dh71OrNZsZOtMdCYa8V1lJvl2mr/qzwcMIs20ddYz4JLiBmwS2K7Iw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"
+  ></script>
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <header class="l_header">
+      <div class="l_header_container">
+        <div class="l_header_title_wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="calc(164.5469970703125*1.8)" height="calc(182.29200744628906*1.8)" viewBox="0 0 164.547 182.292">
+            <path id="交差_1" data-name="交差 1" d="M-1030.888,189.5a107.23,107.23,0,0,0,1.413-17.9,154.753,154.753,0,0,1,1.108-18.826l-.553-2.215.553-3.506-2.584-.923q-6.645,4.061-13.289,7.291a38.1,38.1,0,0,1-13.843,3.784l-7.383-1.108-.922-6.09,5.168-4.614a11.344,11.344,0,0,0,6.46-4.245l9.782-7.567,5.537-3.137.922-2.215-3.322-.554-2.215-3.875-7.936-5.352-.369-3.138-2.769-.185V112.9l-2.768-1.476-4.983-10.521-2.4,1.477,1.846,3.322-3.323,9.6q-2.214,7.568-3.875,14.674t-2.768,14.858l1.107,3.875-1.476,2.584-3.138,2.03-5.721-2.03q-4.614-12-8.491-24.363l.738-1.846q-3.321-2.214-2.768-5.168l.923-4.245-1.661.739-.738-7.2-7.014,15.134a98.98,98.98,0,0,1-9.6,13.843l-4.245,4.43h-2.4q-5.353,4.8-10.336,9.782l-.923-.369a156.222,156.222,0,0,0,16.98-23.256,78.975,78.975,0,0,0,9.967-26.762l-.922-2.954,4.43-15.134-4.983,5.352-1.661.739-1.107,1.845h-2.03l-.738,1.846-7.568,6.645-1.845.923-.554,2.03-8.674,6.276-.37,1.661h-3.322l-2.031-1.661-.553-3.138.922-2.214a61.379,61.379,0,0,0,21.78-15.689q9.229-5.906,9.228-16.242l-3.322-10.151-2.953-.923-2.03,8.675.553,2.953-.553,2.03.369,2.215-2.4.369-5.906-6.46a216.506,216.506,0,0,0-5.353-24.548l1.292-4.061,2.03-.554,2.03.923a65.387,65.387,0,0,1,4.244,18.825l2.215.554,5.353-7.753,1.107,2.03-.553,2.215,6.46,4.43q.922-23.072,1.107-45.22l1.477-4.8,1.845-.554,2.215,1.66,1.661,6.46-.553,1.477a194.309,194.309,0,0,0,.184,42.267q8.49-11.444,14.95-22.241a74.329,74.329,0,0,0,9.044-23.349q.738-5.536-3.322-7.2l-.923-1.845,4.614-1.477,5.353,3.137a19.487,19.487,0,0,1,1.845,8.122,43.678,43.678,0,0,1-4.983,14.673q-3.876,7.106-7.936,14.12,2.769,3.137,5.352,3.137l.554,3.138a67.2,67.2,0,0,1-11.535,13.381,63.033,63.033,0,0,0-11.535,13.75l-2.4,7.2.738,1.661-.738,2.215a20.192,20.192,0,0,1,2.4,9.413,3.2,3.2,0,0,1,2.584,2.768l2.215,8.121-1.108,2.768,2.768.554a12.1,12.1,0,0,0,1.661,6.645l-.369,1.66q2.952,2.954,2.215,8.491a153.378,153.378,0,0,0,10.151-23.809q3.691-11.444,7.752-22.887l.923-.369-.739,6.46-1.476,2.768,2.584.923,7.383,8.675.738,1.661,4.43,1.66,2.4-1.476,2.953.553a58.731,58.731,0,0,0,15.5-9.413l4.061-18.642q-8.49,11.628-15.689,21.779l-6.46,1.108-4.06-2.584-.923-2.769a39.872,39.872,0,0,0,11.813-9.967l16.058-19.933-2.4-.553a58.5,58.5,0,0,1-15.5,10.889l16.241-12.92-1.292-2.584a15.172,15.172,0,0,1-12.182,4.614l-2.584-.739-.923,3.138-4.245.738a64,64,0,0,0-6.459-3.876,17.56,17.56,0,0,1-2.954-7.752,74.937,74.937,0,0,0,0-16.611l2.954-5.168,3.322,3.506,2.768,10.706a122.331,122.331,0,0,1,15.32-13.751,152.118,152.118,0,0,1,15.319-10.058,44.665,44.665,0,0,1,17.719-4.245,34.573,34.573,0,0,1,16.611,4.061l1.661,2.584,1.477.184.554,3.322,4.8,2.215a9.042,9.042,0,0,1,2.03,5.722l-1.476.553-1.292,2.768-1.292.369-1.845-.554a36.932,36.932,0,0,0-6.645,2.584q-6.645,3.137-11.812,6.091l-1.846,1.66-6.09,2.215a150.263,150.263,0,0,0,17.165-12.735l2.768-5.168-6.46-7.2a39.392,39.392,0,0,0-16.427-3.507,31.407,31.407,0,0,0-13.473,5.537l-.554,2.769,2.215,1.476q-1.107,7.383,2.215,12.366l5.168-3.875,8.122,2.215-.923,1.845.923,2.585q-2.954,1.476-6.276,3.322-1.66,2.4-5.352,2.4l-1.292,1.846-1.845,4.43q6.643-5.538,13.842-5.538A36.289,36.289,0,0,1-989.24,63.07a18.075,18.075,0,0,1,4.245,12.92l-.554,1.845.554,1.846q-3.322,7.937-7.383,15.6t-7.567,15.781l10.52,11.075v1.661q-8.12,4.244-16.15,8.674t-16.52,8.306l-1.107,7.567.554,5.907q-1.107,9.412-1.938,18.457a74.087,74.087,0,0,1-3.474,16.795Zm-15.014-49.926a101.089,101.089,0,0,1-15.872,8.029l-.37,2.215,3.323,2.03,9.413-2.768a111.4,111.4,0,0,0,20.488-10.521l1.476-7.567-3.322-.554Q-1038.335,134.868-1045.9,139.575Zm24.364-14.119-.554,9.043,10.89-4.614,11.259-5.721,1.476-5.537q-.922-3.139-1.476-5.722l-2.4-.738A45.988,45.988,0,0,1-1021.539,125.456Zm-21.78-12.182-.922,2.4q5.906,1.662,11.443,2.769l.738,1.845,3.507-1.476,1.476-4.061-2.768-.923a11.068,11.068,0,0,1-5.721,1.292l4.983-7.936Q-1037.042,113.274-1043.319,113.273Zm28.978-46.142-3.323,4.43.554,2.953-2.214,17.349,2.03,1.661a35.2,35.2,0,0,0-3.506,18.826h1.477a37.361,37.361,0,0,1,11.443-4.061q4.614-9.229,9.413-18a46.9,46.9,0,0,0,5.353-20.579l-4.43-4.983-9.044-.923Zm-27.132-5.907h3.323l4.06-1.107,10.705-6.645.923-5.721-1.107-10.336Q-1035.566,48.859-1041.473,61.224Zm29.163-35.253.922,2.4,5.537-1.292-2.768-2.4Z" transform="translate(1134.645 -7.709)" stroke="#000" stroke-width="1" class="svg-elem-1"></path>
+          </svg>          
+        </div>
+        <nav class="l_header_nav_container">
+          <ul class="l_header_nav_list">
+            <li class="l_header_nav_item">
+              <p class="l_header_nav_item-txt">
+                <span class="bgLRextend bgLRextendTrigger bgextend"><span class="bgappearTrigger bgappear">自己紹介</span></span>
+              </p>
+            </li>
+            <li class="l_header_nav_item">
+              <p class="l_header_nav_item-txt">
+                <span class="bgLRextend bgLRextendTrigger bgextend"><span class="bgappearTrigger bgappear">魅力</span></span>
+              </p>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="l_kv">
+      <div class="l_kv_container">
+        <div class="l_kv_img_container">
+          <img src="img/kv (1).jpeg" width="3968px" height="2976px" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (2).jpeg" width="3264px" height="2448px"alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (3).jpeg" width="3968px" height="2976px"alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (4).jpeg" width="3968px" height="1984px"alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (5).jpeg" width="1984px" height="3968px"alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (6).jpeg" width="1984px" height="2980px"alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (7).jpeg" width="1984px" height="3986px"alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (8).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (9).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (10).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (11).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (12).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (13).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (14).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (15).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (16).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (17).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (18).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (19).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (20).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (21).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (22).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (23).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (24).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (25).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (26).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (27).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (28).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (29).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (30).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (31).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (32).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (33).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (34).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (35).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (36).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (37).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (38).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (39).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (40).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (41).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (42).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (43).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (44).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (45).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (46).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (47).jpeg" alt="" class="l_kv_img">
+        </div>
+        <div class="l_kv_img_container">
+          <img src="img/kv (48).jpeg" alt="" class="l_kv_img">
+        </div>
+      </div>
+    </div>
+
+
+    <main class="l_main">
+      <section class="m_section_contents_container">
+        <div class="m_section_wrapper">
+          <div class="m_section_title_wrapper">
+            <p class="m_section_title_txt">
+              自己紹介
+            </p>
+          </div>
+          <div class="m_contents_content">
+            <ul class="m_contents_menu-list">
+              <li class="m_contents_menu-item">
+                <div class="m_content_item_wrapper">
+                  <div class="m_content_item-prev">
+                    <p class="m_content_item-head ">2001年</p>
+                    <p class="m_content_item ">福岡県出身</p>
+                  </div>
+                  <p class="m_content_item_inner">
+                    畑の真ん中ド田舎で生まれる<br>もう一つの故郷は鹿児島の菱刈、日本で二番目に星がきれいな場所（日本で二番目に明かりが少ない場所）
+                  </p>
+                </div>
+              </li>
+              <li class="m_contents_menu-item">
+                <div class="m_content_item_wrapper">
+                  <div class="m_content_item-prev">
+                    <p class="m_content_item-head ">2014年</p>
+                    <p class="m_content_item ">
+                      横浜市立南高等学校附属中学校入学
+                    </p>
+                  </div>
+
+                  <p class="m_content_item_inner">
+                    中学受験を決意
+                    <br>ハーゲンダッツの工場見学とNASAの見学を目当てに入学するも実施していなかった
+                    <br>それまで運動が苦手だったが部活に熱中（ソフトテニス）
+                    <br>プチ反抗期終了
+                  </p>
+                </div>
+              </li>
+              <li class="m_contents_menu-item">
+                <div class="m_content_item_wrapper">
+                  <div class="m_content_item-prev">
+                    <p class="m_content_item-head ">2017年</p>
+                    <p class="m_content_item ">
+                      横浜市立南高等学校入学
+                    </p>
+                  </div>
+
+                  <p class="m_content_item_inner">
+                    部活に没頭し、団体戦で県大会ベスト8入り。
+                    <br>ずっと部活の事を考えていた
+                    <br>体育祭実行委員会副委員長として40年ぶりに応援団を復活させる
+                    <br>一番青春していた感のある3年間
+                  </p>
+                </div>
+              </li>
+              <li class="m_contents_menu-item">
+                <div class="m_content_item_wrapper">
+                  <div class="m_content_item-prev">
+                    <p class="m_content_item-head ">2020年</p>
+                    <p class="m_content_item ">国士舘大学入学</p>  
+                  </div>
+                  <p class="m_content_item_inner">
+                    コロナにより学校に1年間行くことが出来ない
+                    <br>1年の秋で母親が家出しそこから4人分の生活費をバイトで稼ぐ
+                    <br>母と祖母が手術、引っ越しなど混沌とした状況
+                  </p>
+                </div>
+              </li>
+              <li class="m_contents_menu-item">
+                <div class="m_content_item_wrapper">                  <div class="m_content_item-prev">
+                  <p class="m_content_item-head ">2021年</p>
+                  <p class="m_content_item ">Frontier入社</p>
+                </div>
+                  <p class="m_content_item_inner">
+                    スキルを身に着けつけるために営業を始める
+                    <br>すぐにアンチが発生し同級生に縁を切られることもあった
+                    <br>アンチをばねに奮闘しマネージャーに昇進
+                  </p>
+                </div>
+              </li>
+              <li class="m_contents_menu-item">
+                <div class="m_content_item_wrapper">
+                  <div class="m_content_item-prev">
+                    <p class="m_content_item-head ">2022年</p>
+                    <p class="m_content_item ">TOMAP入社</p>  
+                  </div>
+                  <p class="m_content_item_inner">
+                    新たな場で自分の能力を試すために場を変える
+                    <br>当時の営業部長に愛がないと言われ自己の課題に向き合う
+                    <br>今までにないほど自分自身を見直し、考える
+                  </p>
+                </div>
+              </li>
+              <li class="m_contents_menu-item">
+                <div class="m_content_item_wrapper">
+                  <div class="m_content_item-prev">
+                    <p class="m_content_item-head ">2022年</p>
+                    <p class="m_content_item ">zeroplus入学</p>  
+                  </div>
+                  <p class="m_content_item_inner">
+                    自分の精神的成長、能力的成長を考え入学
+                    <br>当時手持ちが一切なかったため夜勤とバイトを掛け持ち
+                    <br>
+                  </p>
+                </div>
+              </li>
+              <li class="m_contents_menu-item">
+                <div class="m_content_item_wrapper">
+                  <div class="m_content_item-prev">
+                    <p class="m_content_item-head ">2022年</p>
+                    <p class="m_content_item ">初案件獲得</p>
+                  </div>
+                  <p class="m_content_item_inner">
+                    自分の精神的成長、能力的成長を考え入学
+                    <br>当時手持ちが一切なかったため夜勤とバイトを掛け持ち
+                    <br>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+      <section class="m_section_container ">
+        <div class="m_section_wrapper m_section_wrapper02">
+          <div class="m_section_title_wrapper">
+            <p class="m_section_title_txt">
+              魅力
+            </p>
+          </div>
+          <div class="m_seciton_content">
+            <ul class="m_section_content_list">
+              <li class="m_section_content_item m_section_content_item01">
+                <div class="m_section_content_item-wrapper">
+                  <div class="m_section_content_img_wrapper">
+                    <img src="img/section02.jpeg" alt="" class="m_section_content_img">
+                  </div>
+                  <div class="m_section_content_contents-wrapper">
+                    <div class="m_section_content_name-wrapper">
+                      R.T
+                    </div>
+                    <div class="m_section_content_title-wrapper">
+                      中高同級生・部活
+                    </div>
+                  </div>
+                </div>
+                <div class="m_section_content_item-back"> <!--背面-->
+                  <div class="m_section_content_item-back-inner">
+                    <div class="m_section_back_title-wrapper">R.Tさんの思う魅力</div>
+                    <div class="m_section_back_content-wrapper">
+                      <ul class="m_section_back_list">
+                        <li class="m_section_back_item">
+                          責任感が強い
+                        </li>
+                        <li class="m_section_back_item">
+                          こだわりが強い
+                        </li>
+                        <li class="m_section_back_item">
+                          コミュニケーション能力が高い
+                        </li>
+                        <li class="m_section_back_item">
+                          しつこい
+                        </li>
+                      </ul>
+                    </div>
+
+                      
+                  </div>
+                </div>
+
+              </li>
+              <li class="m_section_content_item m_section_content_item02">
+                <div class="m_section_content_item-wrapper">
+                  <div class="m_section_content_img_wrapper">
+                    <img src="img/section03.jpeg" alt="" class="m_section_content_img">
+                  </div>
+                  <div class="m_section_content_contents-wrapper">
+                    <div class="m_section_content_name-wrapper">
+                      M.Y
+                    </div>
+                    <div class="m_section_content_title-wrapper">
+                      中高同級生・委員会
+                    </div>
+                  </div>
+                </div>
+                <div class="m_section_content_item-back"> <!--背面-->
+                  <div class="m_section_content_item-back-inner">
+                    <div class="m_section_back_title-wrapper">M.Yさんの思う魅力</div>
+                    <div class="m_section_back_content-wrapper">
+                      <ul class="m_section_back_list">
+                        <li class="m_section_back_item">
+                          ふっかる
+                        </li>
+                        <li class="m_section_back_item">
+                          話聞いてくれる
+                        </li>
+                        <li class="m_section_back_item">
+                          年上ともいい感じにふるまえる
+                        </li>
+                        <li class="m_section_back_item">
+                          後輩ともいい感じにからめる
+                        </li>
+                      </ul>
+                    </div>
+
+                      
+                  </div>
+                </div>
+              </li>
+              <li class="m_section_content_item m_section_content_item03">
+                <div class="m_section_content_item-wrapper">
+                  <div class="m_section_content_img_wrapper">
+                    <img src="img/section01.jpeg" alt="" class="m_section_content_img">
+                  </div>
+                  <div class="m_section_content_contents-wrapper">
+                    <div class="m_section_content_name-wrapper">
+                      S.K
+                    </div>
+                    <div class="m_section_content_title-wrapper">
+                      インターン・上長
+                    </div>
+                  </div>
+                </div>
+                <div class="m_section_content_item-back"> <!--背面-->
+                  <div class="m_section_content_item-back-inner">
+                    <div class="m_section_back_title-wrapper">S.Kさんの思う魅力</div>
+                    <div class="m_section_back_content-wrapper">
+                      <ul class="m_section_back_list">
+                        <li class="m_section_back_item">
+                          年上の懐に入り込める
+                        </li>
+                        <li class="m_section_back_item">
+                          一度決めたら折れない突破力、行動力
+                        </li>
+                        <li class="m_section_back_item">
+                          感情豊か
+                        </li>
+                        <li class="m_section_back_item">
+                          キモイ
+                        </li>
+                        <li class="m_section_back_item">
+                          素直
+                        </li>
+                      </ul>
+                    </div>
+
+                      
+                  </div>
+                </div>
+
+              </li>
+              <li class="m_section_content_item m_section_content_item04">
+                <div class="m_section_content_item-wrapper">
+                  <div class="m_section_content_img_wrapper">
+                    <img src="img/section04.jpeg" alt="" class="m_section_content_img">
+                  </div>
+                  <div class="m_section_content_contents-wrapper">
+                    <div class="m_section_content_name-wrapper">
+                      K.M
+                    </div>
+                    <div class="m_section_content_title-wrapper">
+                      中高同級生
+                    </div>
+                  </div>
+                </div>
+                <div class="m_section_content_item-back"> <!--背面-->
+                  <div class="m_section_content_item-back-inner">
+                    <div class="m_section_back_title-wrapper">K.Mさんの思う魅力</div>
+                    <div class="m_section_back_content-wrapper">
+                      <ul class="m_section_back_list">
+                        <li class="m_section_back_item">
+                          努力家
+                        </li>
+                        <li class="m_section_back_item">
+                          困難から逃げない
+                        </li>
+                        <li class="m_section_back_item">
+                          誠実、真面目
+                        </li>
+                        <li class="m_section_back_item">
+                          責任感
+                        </li>
+                      </ul>
+                    </div>
+
+                      
+                  </div>
+                </div>
+
+              </li>
+              <li class="m_section_content_item m_section_content_item05">
+                <div class="m_section_content_item-wrapper">
+                  <div class="m_section_content_img_wrapper">
+                    <img src="img/section05.jpg" alt="" class="m_section_content_img">
+                  </div>
+                  <div class="m_section_content_contents-wrapper">
+                    <div class="m_section_content_name-wrapper">
+                      A.N
+                    </div>
+                    <div class="m_section_content_title-wrapper">
+                      元同僚・彼女
+                    </div>
+                  </div>
+                </div>
+                <div class="m_section_content_item-back"> <!--背面-->
+                  <div class="m_section_content_item-back-inner">
+                    <div class="m_section_back_title-wrapper">N.Aさんの思う魅力</div>
+                    <div class="m_section_back_content-wrapper">
+                      <ul class="m_section_back_list">
+                        <li class="m_section_back_item">
+                          コミュニケーションが上手
+                        </li>
+                        <li class="m_section_back_item">
+                          興味関心を持つ幅が多い（優柔不断、他力本願）
+                        </li>
+                        <li class="m_section_back_item">
+                          ふっかる
+                        </li>
+                      </ul>
+                    </div>
+
+                      
+                  </div>
+                </div>
+
+              </li>
+              <li class="m_section_content_item m_section_content_item06">
+                <div class="m_section_content_item-wrapper">
+                  <div class="m_section_content_img_wrapper">
+                    <img src="img/section06.jpg" alt="" class="m_section_content_img">
+                  </div>
+                  <div class="m_section_content_contents-wrapper">
+                    <div class="m_section_content_name-wrapper">
+                      A.N
+                    </div>
+                    <div class="m_section_content_title-wrapper">
+                      元同僚・彼女
+                    </div>
+                  </div>
+                </div>
+                <div class="m_section_content_item-back"> <!--背面-->
+                  <div class="m_section_content_item-back-inner">
+                    <div class="m_section_back_title-wrapper">M.Yさんの思う魅力</div>
+                    <div class="m_section_back_content-wrapper">
+                      <ul class="m_section_back_list">
+                        <li class="m_section_back_item">
+                          ふっかる
+                        </li>
+                        <li class="m_section_back_item">
+                          話聞いてくれる
+                        </li>
+                        <li class="m_section_back_item">
+                          年上ともいい感じにふるまえる
+                        </li>
+                        <li class="m_section_back_item">
+                          後輩ともいい感じにからめる
+                        </li>
+                      </ul>
+                    </div>
+
+                      
+                  </div>
+                </div>
+
+              </li>
+              <li class="m_section_content_item m_section_content_item07">
+                <div class="m_section_content_item-wrapper">
+                  <div class="m_section_content_img_wrapper">
+                    <img src="img/kv (11).jpeg" alt="" class="m_section_content_img">
+                  </div>
+                  <div class="m_section_content_contents-wrapper">
+                    <div class="m_section_content_name-wrapper">
+                      A.N
+                    </div>
+                    <div class="m_section_content_title-wrapper">
+                      元同僚・彼女
+                    </div>
+                  </div>
+                </div>
+                <div class="m_section_content_item-back"> <!--背面-->
+                  <div class="m_section_content_item-back-inner">
+                    <div class="m_section_back_title-wrapper">M.Yさんの思う魅力</div>
+                    <div class="m_section_back_content-wrapper">
+                      <ul class="m_section_back_list">
+                        <li class="m_section_back_item">
+                          ふっかる
+                        </li>
+                        <li class="m_section_back_item">
+                          話聞いてくれる
+                        </li>
+                        <li class="m_section_back_item">
+                          年上ともいい感じにふるまえる
+                        </li>
+                        <li class="m_section_back_item">
+                          後輩ともいい感じにからめる
+                        </li>
+                      </ul>
+                    </div>
+
+                      
+                  </div>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+          <div class="m_content_reset_wrapper">
+            <span class="u_reset_border"></span>
+            <span class="u_reset_border u_reset_border02"></span>
+            <button class="m_content_reset_btn">
+              <div class="m_content_reset_txt-wrapper">
+                <p class="m_content_reset_txt">
+                  reset
+                </p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="l_footer">
+      <div class="l_footer_container">
+        <nav class="l_footer_nav">
+          <div class="l_footer_nav_container">
+            <div class="l_footer_nav_title-wrapper">
+              <p class="l_footer_nav_title-txt">
+                お問い合わせ
+              </p>
+            </div>
+            <div class="l_footer_contact_mobile">
+              <div class="l_footer_mobile_item">
+                <p class="l_footer_mobile_item-title">TEL</p>
+                <p class="l_footer_mobile_item-txt">080-3353-6654</p>
+              </div>
+              <div class="l_footer_mobile_item">
+                <p class="l_footer_mobile_item-title">EMAIL</p>
+                <p class="l_footer_mobile_item-txt">zhuneihui06@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
