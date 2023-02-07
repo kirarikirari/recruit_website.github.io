@@ -95,6 +95,14 @@ $(window).on('load', function(){
     $(this).toggleClass("is-active");
 });
 
+ScrollTrigger.create({
+  trigger: '.u_picture_relative01', //アニメーションが始まるトリガーとなる要素
+  start: 'top center',
+  end: 'bottom center', 
+  toggleClass: {targets: ".u_background-line", className: "is-active"}, //クラスをつけたり、外したりできる
+  once: true
+});
+
 
   $(".m_content_reset_wrapper").click(function(){
     $(".m_section_content_item").removeClass("is-active");
@@ -114,11 +122,37 @@ $('.m_content_reset_wrapper').hover(
 );
 
 
-//   if ($('.m_section_content_item').hasClass('.is-active')) {
-//     $(".m_section_content_list").click(function(){
-//       $(this).find(".m_section_content_item").removeClass("is-active");
-//   });
-// };
+  $('.m_content_title_wrapper').click(function(){
+    $(this).next('.m_content_contents_wrapper').slideToggle(1500);
+    $(".m_content_title_wrapper").not(this).next('.m_content_contents_wrapper').slideUp(400);
+
+  });
+
+
+  $('.m_content_title_wrapper').click(function(){
+    $(".m_content_title_wrapper").not(this).addClass("is-not-active");
+  });
+  if ($(".m_content_title_wrapper").hasClass("is-not-active")) {
+    $('.m_content_title_wrapper').click(function(){
+      $(this).removeClass("is-not-active");
+    });
+  }
+
+
+  $('.m_content_title_wrapper').click(function(){
+    if ($(".m_content_title_wrapper").hasClass("is-not-active")) {
+      $(this).removeClass("is-not-active");
+    }
+  });
+
+
+
+
+  $('.m_contents_item_title-wrapper').click(function(){
+    //クリックされた.accordion_oneの中の.accordion_headerに隣接する.accordion_innerが開いたり閉じたりする。
+    $(this).next('.m_content_item_contents-wrapper').slideToggle();
+    $(".m_contents_item_title-wrapper").not(this).next('.m_content_item_contents-wrapper').slideUp();
+  });
 
 
 
