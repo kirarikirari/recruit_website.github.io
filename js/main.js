@@ -150,8 +150,12 @@ $('.m_content_reset_wrapper').hover(
 
   $('.m_contents_item_title-wrapper').click(function(){
     //クリックされた.accordion_oneの中の.accordion_headerに隣接する.accordion_innerが開いたり閉じたりする。
-    $(this).next('.m_content_item_contents-wrapper').slideToggle();
+    $(this).next('.m_content_item_contents-wrapper').slideToggle(1000);
     $(".m_contents_item_title-wrapper").not(this).next('.m_content_item_contents-wrapper').slideUp();
+  });
+
+  $('.u_section_cover').click(function(){
+    $(this).addClass("is-active");
   });
 
 
